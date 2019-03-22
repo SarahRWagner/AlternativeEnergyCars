@@ -4,25 +4,11 @@ public class SteamCar extends AltFuelCar{
     private double pressureGauge;
     private String heatSource;
 
-    public SteamCar(int modelYear, String manufacturer, double tireSize, String color, String fuelCellType, double pressureGauge, String heatSource) {
-        super(modelYear, manufacturer, tireSize, color, fuelCellType);
+    public SteamCar(int modelYear, String manufacturer, double tireSize, String color,double price, String fuelCellType, double pressureGauge, String heatSource) {
+        super(modelYear, manufacturer, tireSize, color, price, fuelCellType);
         this.pressureGauge = pressureGauge;
         this.heatSource = heatSource;
     }
-
-    public SteamCar(double pressureGauge, String heatSource) {
-        this.pressureGauge = pressureGauge;
-        this.heatSource = heatSource;
-    }
-
-    public SteamCar(String fuelCellType, double pressureGauge, String heatSource) {
-        super(fuelCellType);
-        this.pressureGauge = pressureGauge;
-        this.heatSource = heatSource;
-    }
-
-
-
 
     public double getPressureGauge() {
         return pressureGauge;
