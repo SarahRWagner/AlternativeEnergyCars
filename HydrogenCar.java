@@ -5,26 +5,11 @@ public class HydrogenCar extends AltFuelCar {
     private double hydrogenLevel;
     private double hydrogenOxygenRatio;
 
-    public HydrogenCar(int modelYear, String manufacturer, double tireSize, String color, String fuelCellType, double hydrogenLevel, double hydrogenOxygenRatio) {
-        super(modelYear, manufacturer, tireSize, color, fuelCellType);
+    public HydrogenCar(int modelYear, String manufacturer, double tireSize, String color,double price, String fuelCellType, double hydrogenLevel, double hydrogenOxygenRatio) {
+        super(modelYear, manufacturer, tireSize, color, price, fuelCellType);
         this.hydrogenLevel = hydrogenLevel;
         this.hydrogenOxygenRatio = hydrogenOxygenRatio;
     }
-
-    public HydrogenCar(double hydrogenLevel, double hydrogenOxygenRatio) {
-        this.hydrogenLevel = hydrogenLevel;
-        this.hydrogenOxygenRatio = hydrogenOxygenRatio;
-    }
-
-    public HydrogenCar(String fuelCellType, double hydrogenLevel, double hydrogenOxygenRatio) {
-        super(fuelCellType);
-        this.hydrogenLevel = hydrogenLevel;
-        this.hydrogenOxygenRatio = hydrogenOxygenRatio;
-    }
-
-
-
-
 
 
     public double getHydrogenLevel() {
