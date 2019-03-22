@@ -2,8 +2,8 @@ abstract class AltFuelCar extends AlternativeEnergyCar{
 
     protected String fuelCellType;
 
-    public AltFuelCar(int modelYear, String manufacturer, double tireSize, String color, String fuelCellType) {
-        super(modelYear, manufacturer, tireSize, color);
+    public AltFuelCar(int modelYear, String manufacturer, double tireSize, String color, double price, String fuelCellType) {
+        super(modelYear, manufacturer, tireSize, color, price);
         this.fuelCellType = fuelCellType;
     }
     public AltFuelCar(){
