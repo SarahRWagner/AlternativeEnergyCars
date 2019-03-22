@@ -6,18 +6,13 @@ abstract class ElectricCar extends AlternativeEnergyCar{
 
 
 
-    public ElectricCar(int modelYear, String manufacturer, double tireSize, String color, double regenRate, int numbOfElectricsMotors, double batteryCapacity) {
-        super(modelYear, manufacturer, tireSize, color);
+    public ElectricCar(int modelYear, String manufacturer, double tireSize, String color, double price, double regenRate, int numbOfElectricsMotors, double batteryCapacity) {
+        super(modelYear, manufacturer, tireSize, color, price);
         this.regenRate = regenRate;
         this.numbOfElectricsMotors = numbOfElectricsMotors;
         this.batteryCapacity = batteryCapacity;
     }
 
-    public ElectricCar(double regenRate, int numbOfElectricsMotors, double batteryCapacity) {
-        this.regenRate = regenRate;
-        this.numbOfElectricsMotors = numbOfElectricsMotors;
-        this.batteryCapacity = batteryCapacity;
-    }
 
     public ElectricCar() {
         this.regenRate = 50.0;
