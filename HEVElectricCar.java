@@ -4,19 +4,11 @@ public class HEVElectricCar extends ElectricCar{
 
 
 
-    public HEVElectricCar(int modelYear, String manufacturer, double tireSize, String color, double regenRate, int numbOfElectricsMotors, double batteryCapacity, double iCERelianceRate) {
-        super(modelYear, manufacturer, tireSize, color, regenRate, numbOfElectricsMotors, batteryCapacity);
+    public HEVElectricCar(int modelYear, String manufacturer, double tireSize, String color, double price, double regenRate, int numbOfElectricsMotors, double batteryCapacity, double iCERelianceRate) {
+        super(modelYear, manufacturer, tireSize, color, price, regenRate, numbOfElectricsMotors, batteryCapacity);
         this.iCERelianceRate = iCERelianceRate;
     }
 
-    public HEVElectricCar(double regenRate, int numbOfElectricsMotors, double batteryCapacity, double iCERelianceRate) {
-        super(regenRate, numbOfElectricsMotors, batteryCapacity);
-        this.iCERelianceRate = iCERelianceRate;
-    }
-
-    public HEVElectricCar(double iCERelianceRate) {
-        this.iCERelianceRate = iCERelianceRate;
-    }
 
     public double getiCERelianceRate() {
         return iCERelianceRate;
