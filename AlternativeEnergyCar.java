@@ -1,16 +1,17 @@
 /**
  * @author Sarah Wagner
  * This is the answer to question 3 on the midterm exam. This class builds an AlternativeEnergyCar object.
- * An alternative car has a model year, a manufactuerer, a tire size and a color. The methods in the class are the
+ * An alternative car has a model year, a manufactuerer, a tire size, a color, and price. The methods in the class are the
  *  mutagens, accessors and toString.
  */
-public class AlternativeEnergyCar
+public class AlternativeEnergyCar implements Comparable <AlternativeEnergyCar>
 {
     //data is kept private
     protected int modelYear;
     protected String manufacturer;
     protected double tireSize;
     protected String color;
+    protected double price;
 
     /**
      * This will print out what makes up a AlternativeEnergyCar object
@@ -23,6 +24,7 @@ public class AlternativeEnergyCar
                 ", manufacturer='" + manufacturer + '\'' +
                 ", tireSize=" + tireSize +
                 ", color='" + color + '\'' +
+                ", price='" + price +
                 '}';
     }
 
@@ -32,12 +34,14 @@ public class AlternativeEnergyCar
      * @param manufacturer String
      * @param tireSize double
      * @param color String
+     * @param price double
      */
-    public AlternativeEnergyCar(int modelYear, String manufacturer, double tireSize, String color) {
+    public AlternativeEnergyCar(int modelYear, String manufacturer, double tireSize, String color, double price) {
         this.modelYear = modelYear;
         this.manufacturer = manufacturer;
         this.tireSize = tireSize;
         this.color = color;
+        this.price = price;
     }
 
     /**
@@ -48,6 +52,7 @@ public class AlternativeEnergyCar
         this.manufacturer = "Tesla";
         this.tireSize = 20.0;
         this.color = "Black";
+        this.price = 80000.0;
     }
 
     /**
@@ -114,7 +119,38 @@ public class AlternativeEnergyCar
         this.color = color;
     }
 
+    /**
+     * This gets the price and returns it to the user.
+     * @return double
+     */
+    public double getPrice(){
+        return price;
+    }
 
+    /**
+     * This sets the price to whatever the user decides.
+     * @param price double
+     */
+    public void setPrice(double price){
+        this.price = price;
+    }
 
+    /**
+     * This compares the price of the current car to to a comparision car.
+     * @param compareCar AlternativeEnergyCar
+     * @return int
+     */
+    public int compareTo(AlternativeEnergyCar compareCar){
+
+        if(this.getPrice() < compareCar.getPrice()){
+            return -1;
+        }
+        else if(this.getPrice() == compareCar.getPrice()){
+            return 0;
+        }
+        else{
+            return 1;
+        }
+    }
 
 }
