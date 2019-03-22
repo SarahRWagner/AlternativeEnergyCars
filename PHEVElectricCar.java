@@ -5,22 +5,12 @@ public class PHEVElectricCar extends ElectricCar{
 
 
 
-    public PHEVElectricCar(int modelYear, String manufacturer, double tireSize, String color, double regenRate, int numbOfElectricsMotors, double batteryCapacity, String plugType, double chargeTime) {
-        super(modelYear, manufacturer, tireSize, color, regenRate, numbOfElectricsMotors, batteryCapacity);
+    public PHEVElectricCar(int modelYear, String manufacturer, double tireSize, String color, double price, double regenRate, int numbOfElectricsMotors, double batteryCapacity, String plugType, double chargeTime) {
+        super(modelYear, manufacturer, tireSize, color, price, regenRate, numbOfElectricsMotors, batteryCapacity);
         this.plugType = plugType;
         this.chargeTime = chargeTime;
     }
 
-    public PHEVElectricCar(double regenRate, int numbOfElectricsMotors, double batteryCapacity, String plugType, double chargeTime) {
-        super(regenRate, numbOfElectricsMotors, batteryCapacity);
-        this.plugType = plugType;
-        this.chargeTime = chargeTime;
-    }
-
-    public PHEVElectricCar(String plugType, double chargeTime) {
-        this.plugType = plugType;
-        this.chargeTime = chargeTime;
-    }
 
 
 
